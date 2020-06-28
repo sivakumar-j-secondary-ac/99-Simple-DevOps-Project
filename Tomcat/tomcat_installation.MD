@@ -4,23 +4,23 @@
 1. EC2 instance with Java v1.8.x 
 
 ### Install Apache Tomcat
-1. Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance
+1. Download tomcat packages from  http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56.tar.gz onto /opt on EC2 instance
    ```sh 
    # Create tomcat directory
    cd /opt
-   wget http://mirrors.fibergrid.in/apache/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
-   tar -xvzf /opt/apache-tomcat-8.5.35.tar.gz
+   wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.56/bin/apache-tomcat-8.5.56.tar.gz
+   tar -xvzf /opt/apache-tomcat-8.5.56.tar.gz
    ```
 1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
    ```sh
-   chmod +x /opt/apache-tomcat-8.5.35/bin/startup.sh 
+   chmod +x /opt/apache-tomcat-8.5.56/bin/startup.sh 
    shutdown.sh
    ```
 
 1. create link files for tomcat startup.sh and shutdown.sh 
    ```sh
-   ln -s /opt/apache-tomcat-8.5.35/bin/startup.sh /usr/local/bin/tomcatup
-   ln -s /opt/apache-tomcat-8.5.35/bin/shutdown.sh /usr/local/bin/tomcatdown
+   ln -s /opt/apache-tomcat-8.5.56/bin/startup.sh /usr/local/bin/tomcatup
+   ln -s /opt/apache-tomcat-8.5.56/bin/shutdown.sh /usr/local/bin/tomcatdown
    tomcatup
    ```
   #### Check point :
